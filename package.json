@@ -11,7 +11,12 @@
     ],
     "main": "dist/cli.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "tsup src/cli.ts --format esm --splitting false --dts --clean",
+        "dev": "tsup src/cli.ts --format esm --watch",
+        "lint": "eslint .",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build"
     },
     "keywords": [
         "cli",
@@ -30,6 +35,8 @@
         "@typescript-eslint/parser": "^8.45.0",
         "eslint": "^9.37.0",
         "prettier": "^3.6.2",
-        "typescript": "^5.9.3"
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3",
+        "vitest": "^3.2.4"
     }
 }
