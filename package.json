@@ -1,42 +1,45 @@
 {
-    "name": "serim-min-cli",
-    "type": "module",
-    "version": "0.0.1",
-    "description": "CLI about Serim Min",
-    "bin": {
-        "minserim": "dist/cli.js"
-    },
-    "files": [
-        "dist"
-    ],
-    "main": "dist/cli.js",
-    "scripts": {
-        "build": "tsup src/cli.ts --format esm --splitting false --dts --clean",
-        "dev": "tsup src/cli.ts --format esm --watch",
-        "lint": "eslint .",
-        "test": "vitest run",
-        "test:watch": "vitest",
-        "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build"
-    },
-    "keywords": [
-        "cli",
-        "commander",
-        "serimmin"
-    ],
-    "author": "serimmin",
-    "license": "MIT",
-    "packageManager": "pnpm@10.17.1",
-    "engines": {
-        "node": ">=20"
-    },
-    "devDependencies": {
-        "@types/node": "^24.6.2",
-        "@typescript-eslint/eslint-plugin": "^8.45.0",
-        "@typescript-eslint/parser": "^8.45.0",
-        "eslint": "^9.37.0",
-        "prettier": "^3.6.2",
-        "tsup": "^8.5.0",
-        "typescript": "^5.9.3",
-        "vitest": "^3.2.4"
-    }
+  "name": "serim-min-cli",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "CLI about Serim Min",
+  "bin": {
+    "minserim": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --splitting false --dts --clean",
+    "dev": "tsup src/cli.ts --format esm --watch",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build"
+  },
+  "keywords": [
+    "cli",
+    "commander",
+    "serimmin"
+  ],
+  "author": "serimmin",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.37.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.1"
+  }
 }
