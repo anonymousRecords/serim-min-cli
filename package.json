@@ -1,5 +1,6 @@
 {
   "name": "serim-min-cli",
+  "type": "module",
   "version": "0.0.1",
   "description": "CLI about Serim Min",
   "bin": {
@@ -22,5 +23,8 @@
   "packageManager": "pnpm@10.17.1",
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
