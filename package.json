@@ -1,0 +1,26 @@
+{
+  "name": "serim-min-cli",
+  "version": "0.0.1",
+  "description": "CLI about Serim Min",
+  "bin": {
+    "minserim": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "commander",
+    "serimmin"
+  ],
+  "author": "serimmin",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=20"
+  }
+}
