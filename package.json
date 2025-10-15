@@ -10,6 +10,10 @@
     "dist"
   ],
   "main": "dist/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anonymousRecords/serim-min-cli"
+  },
   "scripts": {
     "build": "tsup src/cli.ts --format esm --splitting false --dts --clean",
     "dev": "tsup src/cli.ts --format esm --watch",
