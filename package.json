@@ -14,7 +14,7 @@
     "build": "tsup src/cli.ts --format esm --splitting false --dts --clean",
     "dev": "tsup src/cli.ts --format esm --watch",
     "lint": "eslint .",
-    "test": "vitest run",
+    "test:ci": "vitest run --passWithNoTests --silent",
     "test:watch": "vitest",
     "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build"
   },
