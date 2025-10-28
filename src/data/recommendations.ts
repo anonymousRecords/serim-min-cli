@@ -49,16 +49,16 @@ export interface RecItem {
 
 export const recommendations: RecItem[] = [
   {
-    id: 'rec-2025-ahn',
-    name: 'Ahn D.',
+    id: 'rec-2025-yangteol',
+    name: 'Taeyoon Kim.',
     role: 'Frontend Engineer',
-    relation: '오픈소스 동료',
-    date: '2025.06',
+    relation: '동아리 동료 및 친구',
+    date: '2025.10',
     quote:
-      'quote',
+      '세림은 경험을 기반으로 창의적인 방법을 통해 목적을 달성하는 개발자입니다',
     details:
-      'details',
-    tags: ['product', 'execution', 'velocity'],
+      '세림 님을 처음 대면한 것은 동아리에서 프로젝트 팀을 구성할 때였습니다. 팀원 모집 기간에 세림 님은 직접 개발한 자기소개 웹페이지로 연결되는 QR 코드를 명함처럼 만들어 동아리원들에게 나눠주었습니다. 자신을 알리는 창의적이고 적극적인 방식이 매우 인상 깊었습니다. 세림 님은 자신을 효과적으로 어필하는 방법을 알고 잘 활용합니다. 특히 세림 님은 자신의 경험을 기획과 개발에 녹여내는 능력이 탁월합니다. 이를 통해 사용자 관점에서 문제점을 깊이 있게 분석하고, 불편함을 효과적으로 해소하는 데 강점이 있습니다. 같이 팀으로 일해보고 싶은 인재입니다.',
+    tags: ['creative', 'UX', 'execution'],
     consent: true,
   },
 
