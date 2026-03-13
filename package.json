@@ -4,7 +4,8 @@
   "version": "0.0.2",
   "description": "CLI about Serim Min",
   "bin": {
-    "minserim": "dist/cli.js"
+    "minserim": "dist/cli.js",
+    "serim-min-cli": "dist/cli.js"
   },
   "files": [
     "dist"
