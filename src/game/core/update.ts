@@ -75,7 +75,7 @@ export function initialState(opts?: {
     tick: 0,
     energy: 70,
     obstacles: [],
-    logs: ['🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱'],
+    logs: ['--- 게임 시작! 드레인을 피하고 부스트를 맞으세요 ---'],
   }
 }
 
@@ -90,7 +90,7 @@ function resetGame(s: GameState) {
   s.energy = clampEnergy(70)
   s.obstacles.length = 0
   s.logs.length = 0
-  pushLog(s, '✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+  pushLog(s, '--- 재시작! ---')
 }
 
 // ----- Systems orchestration --------------------------------------------------
@@ -134,8 +134,8 @@ function processCollisions(s: GameState) {
       // apply energy delta and log
       const { energy } = applyEnergy(s.energy, o.value, CONFIG.ENERGY_MAX)
       s.energy = energy
-      if (o.kind === 'drain') pushLog(s, `⚠️  ${o.label} ${o.value}`)
-      else pushLog(s, `🧚  ${o.label} +${o.value}`)
+      if (o.kind === 'drain') pushLog(s, `[${o.value}] ${o.label}`)
+      else pushLog(s, `[+${o.value}] ${o.label}`)
 
       // consume obstacle
       s.obstacles.splice(i, 1)
@@ -145,7 +145,7 @@ function processCollisions(s: GameState) {
       if (isDepleted(s.energy)) {
         s.phase = 'over'
         s.best = Math.max(s.best, s.score)
-        pushLog(s, '에너지가 바닥났어요… 💫')
+        pushLog(s, '에너지가 바닥났어요...')
         return
       }
     }
