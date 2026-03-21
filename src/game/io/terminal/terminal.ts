@@ -19,8 +19,12 @@ const ANSI = {
   reset: '\x1b[0m',
 } as const
 
-export const colorize = (s: string, c?: Color) =>
-  c ? `${ANSI[c]}${s}${ANSI.reset}` : s
+const BOLD = '\x1b[1m'
+
+export const colorize = (s: string, c?: Color, bold = false) => {
+  const prefix = (c ? ANSI[c] : '') + (bold ? BOLD : '')
+  return prefix ? `${prefix}${s}${ANSI.reset}` : s
+}
 
 export const drawText = (r: number, c: number, text: string) => {
   moveTo(r, c)
