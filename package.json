@@ -18,7 +18,7 @@
   "scripts": {
     "build": "tsup src/cli.ts --format esm --splitting false --dts --clean",
     "dev": "tsup src/cli.ts --format esm --watch",
-    "game": "pnpm build && node dist/cli.js game",
+    "game": "pnpm build && node dist/cli.js runner",
     "start": "node dist/cli.js",
     "lint": "eslint .",
     "test": "vitest run --passWithNoTests",
