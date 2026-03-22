@@ -40,7 +40,6 @@ export async function runTalks(
   }
 
   list = sortByDate(list, opts.order || 'asc')
-  if (opts.order === 'desc') list.reverse()
 
   const gap = Number.isFinite(opts.gap) ? (opts.gap as number) : 1200
   const speed = Number.isFinite(opts.speed) ? (opts.speed as number) : 6

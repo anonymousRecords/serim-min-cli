@@ -9,7 +9,7 @@ export function collide(
   const dy = Math.round(catY)
 
   const CAT_WIDTH = 3
-  const OB_WIDTH = 3
+  const OB_WIDTH = 4
 
   const catLeft = CAT_X
   const catRight = CAT_X + CAT_WIDTH

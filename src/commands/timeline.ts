@@ -26,7 +26,6 @@ export async function runTimeline(
 ) {
   header('🕓', '민세림의 타임라인')
   let items = sortByPeriod(timeline, opts.reverse ? 'desc' : 'asc')
-  if (opts.reverse) items.reverse()
 
   if (opts.all) {
     let i = 0
